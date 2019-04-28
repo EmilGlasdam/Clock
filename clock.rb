@@ -2,7 +2,6 @@ require 'ruby2d'
 require_relative 'face'
 require_relative 'hand'
 
-
 set(background: 'white', title: "Det analoge ur")
 
 face = Face.new(x: 320,y: 240, radius: 200)
