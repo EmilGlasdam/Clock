@@ -34,7 +34,8 @@ update do
   sekunder = tid.sec
   seconds_hand.angle = 6 * sekunder
   timer = tid.hour
-  hours_hand.angle = 30 * timer
+  timer_i_minutter = timer*60+minuter
+  hours_hand.angle = (360*timer_i_minutter)/720 
 end
 
 show
