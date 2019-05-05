@@ -23,7 +23,7 @@ minutes_hand.draw
 end
 
 12.downto(0).each do |hours|
-  tick = Tick.new(x: 320, y: 240, length: 20, radius: 188, angle: 30*hours)
+  tick = Tick.new(x: 320, y: 240, length: 20, radius: 188, angle: 30*hours, width: 5)
   tick.draw
 end
 

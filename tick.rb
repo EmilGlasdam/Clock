@@ -1,6 +1,6 @@
 class Tick
 
-  attr_accessor :x, :y, :length, :radius, :angle, :color
+  attr_accessor :x, :y, :length, :radius, :angle, :color, :width
 
   def initialize(options = {})
     self.x = options[:x]
@@ -9,6 +9,7 @@ class Tick
     self.radius = options[:radius] || 20
     self.angle = options[:angle] || 0
     self.color = options[:color] || 'black'
+    self.width = options[:width] || 2
   end
 
   def draw
@@ -19,7 +20,7 @@ class Tick
     @line ||= Line.new(
       x1: x, y1: y,
       x2: x, y2: y-length,
-      width: 2,
+      width: width,
       color: color,
       z: 2
     )
