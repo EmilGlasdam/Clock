@@ -6,7 +6,7 @@ require_relative 'tick'
 def set_seconds(tid)
 end
 
-set(background: 'white', title: "Det analoge ur")
+set(background: 'white', title: "Det analoge ur" )
 
 face = Face.new(x: 320,y: 240, radius: 200)
 seconds_hand = Hand.new(x: 320, y: 240, length: 180, color: 'red', width: 2, z: 5)
