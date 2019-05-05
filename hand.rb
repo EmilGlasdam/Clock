@@ -1,7 +1,7 @@
 
 class Hand
 
-  attr_accessor :x, :y, :length, :color, :width
+  attr_accessor :x, :y, :length, :color, :width, :z
 
   def initialize(options = {})
     self.x = options[:x]
@@ -9,6 +9,7 @@ class Hand
     self.length = options[:length]
     self.color = options[:color]
     self.width = options[:width]
+    self.z = options[:z]
   end
 
   def draw
@@ -29,7 +30,7 @@ class Hand
       x2: x, y2: y-length,
       width: width,
       color: color,
-      z: 20
+      z: z
     )
   end
 

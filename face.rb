@@ -21,7 +21,7 @@ class Face
       radius: radius,
       sectors: 128,
       color: 'black',
-      z: 10
+      z: 1
     )
   end
 
@@ -31,7 +31,7 @@ class Face
       radius: radius-10,
       sectors: 128,
       color: 'white',
-      z: 11
+      z: 2
     )
   end
 
@@ -41,7 +41,7 @@ class Face
       radius: 5,
       sectors: 32,
       color: 'black',
-      z: 12
+      z: 3
     )
   end
 

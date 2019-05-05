@@ -8,8 +8,9 @@ end
 set(background: 'white', title: "Det analoge ur")
 
 face = Face.new(x: 320,y: 240, radius: 200)
-seconds_hand = Hand.new(x: 320, y: 240, length: 180, color: 'red', width: 2)
-minutes_hand = Hand.new(x: 320, y: 240, length: 180, color: 'green', width: 4)
+seconds_hand = Hand.new(x: 320, y: 240, length: 180, color: 'red', width: 2, z: 4)
+minutes_hand = Hand.new(x: 320, y: 240, length: 170, color: 'green', width: 4, z: 3)
+hours_hand = Hand.new(x: 320, y: 240, length: 150, color: 'black', width: 7, z: 2)
 
 face.draw
 seconds_hand.draw
@@ -21,6 +22,8 @@ update do
   minutes_hand.angle = 6 * minuter
   sekunder = tid.sec
   seconds_hand.angle = 6 * sekunder
+  timer = tid.hour
+  hours_hand.angle = 30 * timer
 end
 
 show
