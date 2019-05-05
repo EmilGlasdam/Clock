@@ -11,7 +11,7 @@ set(background: 'white', title: "Det analoge ur")
 face = Face.new(x: 320,y: 240, radius: 200)
 seconds_hand = Hand.new(x: 320, y: 240, length: 180, color: 'red', width: 2, z: 5)
 minutes_hand = Hand.new(x: 320, y: 240, length: 170, color: 'green', width: 4, z: 4)
-hours_hand = Hand.new(x: 320, y: 240, length: 150, color: 'black', width: 7, z: 3)
+hours_hand = Hand.new(x: 320, y: 240, length: 140, color: 'black', width: 7, z: 3)
 
 face.draw
 seconds_hand.draw
