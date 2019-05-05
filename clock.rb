@@ -9,8 +9,8 @@ end
 set(background: 'white', title: "Det analoge ur")
 
 face = Face.new(x: 320,y: 240, radius: 200)
-seconds_hand = Hand.new(x: 320, y: 240, length: 180, color: 'red')
-minutes_hand = Hand.new(x: 320, y: 240, length: 180, color: 'green')
+seconds_hand = Hand.new(x: 320, y: 240, length: 180, color: 'red', width: 2)
+minutes_hand = Hand.new(x: 320, y: 240, length: 180, color: 'green', width: 4)
 
 face.draw
 seconds_hand.draw

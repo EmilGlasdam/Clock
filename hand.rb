@@ -1,13 +1,14 @@
 
 class Hand
 
-  attr_accessor :x, :y, :length, :color
+  attr_accessor :x, :y, :length, :color, :width
 
   def initialize(options = {})
     self.x = options[:x]
     self.y = options[:y]
     self.length = options[:length]
     self.color = options[:color]
+    self.width = options[:width]
   end
 
   def draw
@@ -26,7 +27,7 @@ class Hand
     @line ||= Line.new(
       x1: x, y1: y,
       x2: x, y2: y-length,
-      width: 2,
+      width: width,
       color: color,
       z: 20
     )
