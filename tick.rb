@@ -21,7 +21,7 @@ class Tick
       x2: x, y2: y-length,
       width: 2,
       color: color,
-      z: 20
+      z: 2
     )
   end
 
