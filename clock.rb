@@ -29,13 +29,14 @@ end
 
 update do
   tid = Time.now
-  minuter = tid.min
-  minutes_hand.angle = 6 * minuter
-  sekunder = tid.sec
-  seconds_hand.angle = 6 * sekunder
+  minuter_i_sekunder = tid.min * 60 + tid.sec
+  minutes_hand.angle = 360*minuter_i_sekunder / 3600.0
+
+  mili_sekunder = tid.sec*10 + tid.usec / 100_000
+  seconds_hand.angle = 360*mili_sekunder / 600.0
   timer = tid.hour
-  timer_i_minutter = timer*60+minuter
-  hours_hand.angle = (360*timer_i_minutter)/720 
+  timer_i_minutter = timer*60+tid.min
+  hours_hand.angle = (360*timer_i_minutter)/720.0 
 end
 
 show
